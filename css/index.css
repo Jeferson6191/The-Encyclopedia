@@ -1,0 +1,102 @@
+:root{
+    /* espaçamentos */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    /* paleta de cores */
+    --color-1: #011f4b;
+    --color-2: #03396c;
+    --color-3: #005b96;
+    --color-4: #6497b1;
+    --color-5: #b3cde0;
+    --color-6: #d1e4f5;
+    --color-7: #d9e6f3;
+    --color-8: #e4edf5;
+}  
+/* configuração da página */
+section{
+    margin-block-start: 8%;
+    margin-inline: 0.5%;
+}
+/* configuração do cartão */
+.cartão{
+    background-image: linear-gradient(to right, var(--color-8), #f0f5fa);
+    border-left: #011f4b solid;
+    margin-right: 30%;
+    border-end-end-radius:var(--space-3) ;
+    transition: all 0.5s ease;
+    margin-block: 2%;
+}
+/* configuração do titulo no cartão */
+.cartão h1{
+    display: block;
+    padding-block: var(--space-2);
+    margin-inline: var(--space-1) ;
+    border-bottom: thick solid var(--color-7);
+    
+}
+/* configuração dos textos */
+.cartão p {
+    padding-block: var(--space-2);
+    margin-left: var(--space-3) ;
+    margin-right: 20% ;
+    font-size: var(--space-3);
+}
+/* interação quando o mouse passa em cima dos cartões */
+.conteiner .cartão:hover{
+    margin-left: 12px;
+    border-left-width:5px;
+    box-shadow: 0 0 12px rgb(202, 202, 202);
+    transition: 0.5s;
+}
+/* estilização do botão */
+.botao{
+    border: none;
+    border-color: var(--color-5);
+    border-width: 5px;
+    background: linear-gradient(270deg, var(--color-1), var(--color-3), var(--color-1));
+    background-size: 400% 400%;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    color: white;
+    border-radius: var(--space-1);
+    align-content: center;
+    width: 200px;
+    height: 80px;
+    font-size: var(--space-3);
+    animation: botaoanimation 3s ease infinite;
+    margin-bottom: var(--space-6);
+}
+/* interações com o botão */
+.botao:hover{
+    animation: botaoanimation 0.5s ease infinite;
+    width: 210px;
+}
+.botao:active{
+    width: 220px
+}
+/* animação para o botão */
+@keyframes botaoanimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* centralização do botão */
+.cartão .botao{
+    display: block;
+    margin: 0 auto;
+}
+@media ((max-width:720px)) {
+    .cartão{
+        margin-right: 0;
+    }
+}

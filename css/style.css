@@ -1,0 +1,121 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    /* espaçamentos */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    /* paleta de cores */
+    --color-1: #011f4b;
+    --color-2: #03396c;
+    --color-3: #005b96;
+    --color-4: #6497b1;
+    --color-5: #b3cde0;
+    --color-6: #d1e4f5;
+    --color-7: #bed9f1;
+    --color-8: #aacae8;
+}   
+/* configuração do fundo da nav */
+nav{
+    background-image: linear-gradient(to right, var(--color-1), var(--color-2));
+    box-shadow: 0 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+/* ajuste de posicionamento das opçõpes */
+nav li{
+    display: inline-block;
+}
+/* ajuste de estilo e posicionamento das opções */
+nav li a{
+    display: inline-block;
+    color: white;
+    padding: var(--space-2);
+    text-decoration: none;
+    
+}
+/* interação com o hover */
+nav li:hover, a:hover{
+    background-color: var(--color-4);
+    border-radius: var(--space-1);
+    transition-duration: 500ms;
+
+}
+/* interação no clique */
+nav li:active, a:active{
+    background-color: #03396c;
+}
+/* configuração do dropdown menu */
+.dropdown-menu{
+    position: absolute;
+    background-color: var(--color-3);
+    box-shadow: 0 0 4px;
+    display: none;
+}
+.dropdown-menu a{
+    display: block;
+}
+
+nav li:hover .dropdown-menu{
+    display: block;
+    
+}
+/* posicionamento da imagem de logo */
+
+nav img{
+    width: 50px;
+    border-radius: 100%;
+    
+}
+
+.menu-hamburger span{display: none;}
+
+@media ((max-width:720px)) {
+
+    .dropdown-menu{
+        position: relative;
+        box-shadow: none;
+    }
+    nav img{
+        display: none;
+    }
+    nav li, a{
+        display: none;
+    }
+    nav{
+        display: block;
+        justify-content: center;
+    }   
+    .menu-hamburger span{
+        background-image: linear-gradient(to right, var(--color-1), var(--color-2));
+        padding: var(--space-);
+        color: white;
+        display: flex;
+        justify-content: left;
+        size: 100px;
+        cursor: pointer;
+        font-size: 50px;
+        box-shadow: 0 0 5px black;
+        
+    }
+    /* classe para adicionar no JS */
+    .classe-momentanea-opcoes{
+        display: grid;
+        transition-duration: 1s ease;
+    }
+    .classe-momentanea-menu{
+        color: black;
+        background-color: white;
+        transition: 1s ease; 
+    }
+}
+

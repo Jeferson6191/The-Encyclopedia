@@ -1,0 +1,169 @@
+section{
+    padding-block: 0;
+    padding-inline: 34%;
+}
+
+:root{
+    /* espaçamentos */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    /* paleta de cores */
+    --color-1: #011f4b;
+    --color-2: #03396c;
+    --color-3: #005b96;
+    --color-4: #6497b1;
+    --color-5: #b3cde0;
+    --color-6: #d1e4f5;
+    --color-7: #bed9f1;
+    --color-8: #e4edf5;
+}  
+
+
+/* posição do H1 */
+.form-box h1{
+    display: block;
+    text-align: center;
+    border-bottom: thin solid black;
+    margin-bottom: 7%;
+    padding-bottom: 3% ;
+}
+/* estilização do fundo da div */
+.form-box{
+    background-color: var(--color-8);
+    padding: 5%;
+    border-radius: var(--space-2);
+}
+/* estilização dos inputs */
+.form-box input{
+    background-color: white;
+    outline: none;
+    border: none;
+    height: 70px;
+    width: 250px;
+    border-radius: var(--space-1);
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid var(--color-3);
+    margin-block: 12px;
+}
+/* interação quando a caixa de texto esta em foco */
+.form-box input:focus{
+    border-width: 2px;
+
+}
+/* posicionando a coluna da esquerda */
+.coluna1{
+    display: grid;
+    justify-items: left;
+    position: absolute;
+    
+}
+/* posicionando a coluna da direita */
+.coluna2{
+    display: grid;
+    justify-items: right;
+}
+
+/* estilizando e posicionando o botao de enviar */
+.form-box #enviar{
+    display: grid;
+    justify-items: right;
+    border-color: var(--color-5);
+    border-width: 5px;
+    background: linear-gradient(270deg, var(--color-1), var(--color-3), var(--color-1));
+    background-size: 400% 400%;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    color: white;
+}
+
+/* interação com o botão de enviar ao passar o mouse por cima */
+.form-box #enviar:hover{
+    animation: botaoanimation 3s ease infinite;
+}
+/* interação com o botão de enviar quando clicar */
+.form-box #enviar:active{
+    background: #005b96;
+}
+/* animação de degrade do botão de enviar */
+@keyframes botaoanimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* comandos para responsividade do site */
+@media ((max-width:720px)) {
+    section{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .form-box{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 300px;
+        margin: 0 auto;
+        
+    }
+    .coluna1, .coluna2{
+        position: relative;
+        justify-items: left;
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+@media ((max-width:1740px)) {
+    section{
+    padding-block: 7%;
+    padding-inline: 25%;
+}
+}
+
+@media ((max-width:1125px)) {
+
+    section{
+        padding-inline: 30%;
+    }
+    .form-box{
+        display: grid;
+        justify-content: center;
+        position: relative;
+    }
+    .coluna1, .coluna2{
+        position: relative;
+        justify-items: left;
+    }
+}
+
+
+/* se der incorreto */
+
+.form-box input.erro {
+    animation: animacaoerro 10s ease ;
+}
+
+@keyframes animacaoerro {
+    0%{
+        border: 2px solid red !important;
+        box-shadow: 0 0 6px red;
+    }
+    50%{
+        border: 3px solid red !important;
+        box-shadow: 0 0 6px red;
+    }
+
+}
