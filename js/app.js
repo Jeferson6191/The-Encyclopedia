@@ -49,23 +49,3 @@ enviarbtn.addEventListener("click", () => {
 
 });
 
-// seleçao da navbar
-
-let Pythonlink = document.querySelector("#Python")
-let Nodelink = document.querySelector("#Node.js")
-let FrontEndlink = document.querySelector("#FrontEnd")
-let Golanglink = document.querySelector("#Golang")
-let Javalink = document.querySelector("#Java")
-let Cslink = document.querySelector("#.NET")
-let TypeScriptlink = document.querySelector("#TypeScript")
-let Reactlink = document.querySelector("#React")
-
-let Pythoncard = document.querySelector("#Python")
-let nodejscard = document.querySelector("#nodejscard")
-let hmtlcard = document.querySelector("#hmtlcard")
-let gocard = document.querySelector("#gocard")
-let javacard = document.querySelector("#javacard")
-let cscard = document.querySelector("#cscard")
-let tscard = document.querySelector("#tscard")
-let reactcard = document.querySelector("#reactcard")
-
